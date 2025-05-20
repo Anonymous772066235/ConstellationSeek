@@ -1,4 +1,4 @@
-# File      :test-0207-01.py
+# File      :StarsDetection.py
 # Author    :Wu Ji
 # Time      :2025/02/07
 # Version   :1.0
@@ -9,7 +9,7 @@ import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 plt.rcParams['font.sans-serif'] = ['SimHei']
-plt.rcParams['axes.unicode_minus'] = False  # 解决负号显示问题
+plt.rcParams['axes.unicode_minus'] = False
 from icecream import ic
 def detect_stars(image_path, visualize=True):
     """
@@ -99,7 +99,7 @@ if __name__ == "__main__":
     current_dir = os.path.dirname(os.path.abspath(__file__))
 
     # 检测图片中的星星
-    image_path = os.path.join(current_dir, r"C:\Users\WooChi\Desktop\12529647.png")  # 替换为你的图片路径
+    image_path = os.path.join(current_dir, r"..\data\smalltestdata.png")
     star_positions, processed_image = detect_stars(image_path, visualize=True)
 
     print(f"检测到 {len(star_positions)} 颗星星。")
